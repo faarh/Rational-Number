@@ -16,4 +16,16 @@ public class RationalNumber {
     public void print() {
         System.out.println(numerator + "/" + denominator);
     }
+    public RationalNumber add(RationalNumber r) {
+        int newNumerator = (this.numerator * r.denominator) + (r.numerator * this.denominator);
+        int newDenominator = this.denominator * r.denominator;
+        return new RationalNumber(newNumerator, newDenominator);
+    }
+
+
+    public RationalNumber subtract(RationalNumber r) {
+        int newNumerator = (this.numerator * r.denominator) - (r.numerator * this.denominator);
+        int newDenominator = this.denominator * r.denominator;
+        return new RationalNumber(newNumerator, newDenominator);
+    }
 }
